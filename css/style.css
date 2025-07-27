@@ -29,16 +29,13 @@ section {
     padding: 0 20px;
 }
 
-/* Asegura que los títulos hereden el centrado */
-
-
 /* Elimina posibles estilos conflictivos */
 .seccion-con-imagen {
     display: block !important;
     text-align: center;
 }
 
-/* Opcional: Ajusta el espacio alrededor */
+/* Ajusta el espacio alrededor */
 .seccion-con-imagen {
     margin-bottom: 3rem;
 }
@@ -50,7 +47,7 @@ section {
     margin-right: auto;
 }
 
-/* Específico para Canchas */
+/* Canchas */
 .canchas .section-title,
 .canchas .section-subtitle,
 .servicios .section-title,
@@ -69,7 +66,7 @@ section {
 
 .section-title {
     font-size: 3rem;
-    color: #FF6B00; /* Color naranja como el logo */
+    color: #FF6B00; 
     text-transform: uppercase;
     letter-spacing: 2px;
     margin-bottom: 1rem;
@@ -102,7 +99,7 @@ section {
 
 .section-subtitle {
     font-size: 1.3rem;
-    color: #fff; /* Cambié a blanco para mejor contraste */
+    color: #fff; 
     max-width: 600px;
     margin: 0 auto 2rem;
     padding: 15px;
@@ -181,12 +178,12 @@ section {
 }
 
 .navbar .nav-links a {
-    color: white; /* Fuerza el color blanco */
+    color: white; 
     font-weight: 600;
 }
 
 .logo {
-    height: 80px; /* Altura del contenedor */
+    height: 80px; 
     display: flex;
     align-items: center;
     overflow: visible;
@@ -199,22 +196,18 @@ section {
 
 /*configuracion de logo2*/
 .logo-link2 {
-    
     /*ajustes de tamaño*/
-    height: 150px; /* Altura del contenedor */
+    height: 150px; 
     display: flex;
-    /*ajustes del logo*/
-
-
-    /*otra forma de centrar*/
+    
     justify-content: center;
 
 }
 
 .logo-img {
-    height: 100%; /* La imagen ocupará toda la altura del contenedor */
+    height: 100%; 
     width: auto;
-    max-height: 80px; /* Altura máxima (ajusta según necesites) */
+    max-height: 80px; 
     transition: transform 0.3s ease;
 }
 
@@ -240,7 +233,7 @@ section {
     }
 }
 
-/* Efecto hover opcional */
+/* Efecto hover*/
 .logo-img:hover {
     transform: scale(1.05); /* Ligero aumento al pasar el mouse */
 }
@@ -265,7 +258,7 @@ section {
 
     .hero-text {
         padding: 0 5%; /* Margen lateral en móviles */
-        margin-top: 0px; /* Ajusta este valor según necesites */
+        margin-top: 0px; 
         text-align: center;
     }
 
@@ -379,7 +372,7 @@ section {
     transition: all 0.3s ease;
 }
 
-/* Hero Section - Versión ajustada */
+/* Hero Section */
 .hero {
     height: 100vh;
     background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/fondo_inicio.jpg');
@@ -387,8 +380,8 @@ section {
     background-position: center;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Cambiado de center a flex-start */
-    padding-left: 5%; /* Espacio desde el borde izquierdo */
+    justify-content: flex-start; 
+    padding-left: 5%; 
     color: white;
     margin-top: 80px;
 }
@@ -402,7 +395,7 @@ section {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    line-height: 1.2; /* Mejor espaciado entre líneas */
+    line-height: 1.2; 
 }
 
 .hero-text p {
@@ -410,7 +403,7 @@ section {
     line-height: 1.6;
     margin-bottom: 2rem;
     font-weight: 300;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); 
 }
 
 /* Ajustes específicos para el título */
@@ -418,8 +411,8 @@ section {
     font-size: 3.5rem;
     margin-bottom: 1.5rem;
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-    white-space: nowrap; /* Evita el salto de línea */
-    overflow: visible; /* Permite que el texto desborde si es necesario */
+    white-space: nowrap; 
+    overflow: visible; 
 }
 
 /* Ajuste responsivo para pantallas pequeñas */
@@ -460,13 +453,13 @@ section {
 }
 
 .section.canchas {
-    padding-bottom: 0rem !important; /* Ajusta este valor (40px, 30px, etc.) */
+    padding-bottom: 0rem !important; 
 }
 
 .section.servicios {
     background: 
         linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-        url('../images/fondo_servicios.jpg'); /* Ajusta la ruta */
+        url('../images/fondo_servicios.jpg'); 
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -475,7 +468,7 @@ section {
 }
 
 .servicios .section-subtitle {
-    margin-bottom: 30px !important; /* Reduce espacio bajo el título de servicios */
+    margin-bottom: 30px !important; 
 }
 
 /* Asegurar que el carrusel tenga fondo transparente */
@@ -727,8 +720,6 @@ section {
     filter: brightness(1.1);
 }
 
-
-
 /* Texto de la cancha */
 .cancha-info {
     padding: 25px;
@@ -825,7 +816,7 @@ section {
         grid-template-columns: 1fr;
     }
     .cancha-item img {
-        height: 200px; /* Altura menor en móviles */
+        height: 200px;
     }
     
     .cancha-info {
@@ -942,7 +933,7 @@ section {
 
 .section-text {
     font-size: 1.1rem;
-    color: #fff; /* Cambié a blanco para mejor contraste */
+    color: #fff; 
     max-width: 780px;
     margin: 0 auto 2rem;
     padding: 15px;
@@ -1028,7 +1019,8 @@ section {
     }
     
     .mapa-container {
-        height: 300px;
+        height: 5%;
+        min-width: 5%;
         /*largo*/
     }
     
