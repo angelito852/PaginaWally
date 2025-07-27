@@ -1,0 +1,1201 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+section {
+    padding: 4rem 0;
+}
+
+/* Contenedor del texto */
+.texto-seccion {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Asegura que los títulos hereden el centrado */
+
+
+/* Elimina posibles estilos conflictivos */
+.seccion-con-imagen {
+    display: block !important;
+    text-align: center;
+}
+
+/* Opcional: Ajusta el espacio alrededor */
+.seccion-con-imagen {
+    margin-bottom: 3rem;
+}
+
+.section-title, .section-subtitle {
+    text-align: center;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Específico para Canchas */
+.canchas .section-title,
+.canchas .section-subtitle,
+.servicios .section-title,
+.servicios .section-subtitle {
+    text-align: center !important;
+    display: block;
+    max-width: 800px;
+    margin: 0 auto 15px auto;
+}
+
+/* Contenedor padre */
+.texto-seccion {
+    width: 100%;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: #FF6B00; /* Color naranja como el logo */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+    position: relative;
+    display: inline-block;
+    animation: titleGlow 2s infinite alternate;
+}
+
+@keyframes titleGlow {
+    0% {
+        text-shadow: 0 0 10px rgba(255, 107, 0, 0.3);
+    }
+    100% {
+        text-shadow: 0 0 20px rgba(255, 107, 0, 0.7), 
+                     0 0 30px rgba(255, 107, 0, 0.4);
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+.section-subtitle.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end);
+}
+
+.section-subtitle {
+    font-size: 1.3rem;
+    color: #fff; /* Cambié a blanco para mejor contraste */
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #FF6B00;
+    position: relative;
+    overflow: hidden;
+}
+
+.cancha-info::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, transparent, rgba(255,107,0,0.1), transparent);
+    z-index: -1;
+    transition: 0.5s;
+    opacity: 0;
+}
+
+.cancha-item:hover .cancha-info::after {
+    opacity: 1;
+}
+
+.section-subtitle::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.section-subtitle:hover::before {
+    left: 100%;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #FF6B00, transparent);
+    bottom: -10px;
+    left: 0;
+}
+
+.section-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.cancha-item:nth-child(1) { animation-delay: 0.1s; }
+.cancha-item:nth-child(2) { animation-delay: 0.3s; }
+.cancha-item:nth-child(3) { animation-delay: 0.5s; }
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    background-color: #002142; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.navbar .nav-links a {
+    color: white; /* Fuerza el color blanco */
+    font-weight: 600;
+}
+
+.logo {
+    height: 80px; /* Altura del contenedor */
+    display: flex;
+    align-items: center;
+    overflow: visible;
+}
+
+.logo a {
+    display: inline-block;
+    height: 100%;
+}
+
+/*configuracion de logo2*/
+.logo-link2 {
+    
+    /*ajustes de tamaño*/
+    height: 150px; /* Altura del contenedor */
+    display: flex;
+    /*ajustes del logo*/
+
+
+    /*otra forma de centrar*/
+    justify-content: center;
+
+}
+
+.logo-img {
+    height: 100%; /* La imagen ocupará toda la altura del contenedor */
+    width: auto;
+    max-height: 80px; /* Altura máxima (ajusta según necesites) */
+    transition: transform 0.3s ease;
+}
+
+/* Efecto de resplandor naranja */
+.glow-effect {
+    filter: drop-shadow(0 0 5px rgba(255, 107, 0, 0.7)); /* Resplandor base */
+    transition: all 0.3s ease-in-out;
+}
+
+/* Efecto al pasar el mouse */
+.glow-effect:hover {
+    filter: drop-shadow(0 0 15px rgba(255, 107, 0, 0.9)) brightness(0.5);
+    animation: pulse-glow 0.5s infinite alternate;
+}
+
+/* Animación de pulsación */
+@keyframes pulse-glow {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(255, 107, 0, 0.7));
+    }
+    100% {
+        filter: drop-shadow(0 0 20px rgba(255, 107, 0, 0.9)) brightness(1.2);
+    }
+}
+
+/* Efecto hover opcional */
+.logo-img:hover {
+    transform: scale(1.05); /* Ligero aumento al pasar el mouse */
+}
+
+/* Versión móvil */
+@media screen and (max-width: 768px) {
+    .logo {
+        height: 60px; /* Más pequeño en móviles */
+    }
+    .logo-img {
+        max-height: 60px;
+    }
+    .glow-effect {
+        filter: drop-shadow(0 0 3px rgba(255, 107, 0, 0.7)); /* Resplandor más sutil */
+    }
+    /* Hero Section */
+    .hero {
+        padding-top: 20px; /* Reduce espacio superior */
+        justify-content: center;
+    }
+    /* Título */
+
+    .hero-text {
+        padding: 0 5%; /* Margen lateral en móviles */
+        margin-top: 0px; /* Ajusta este valor según necesites */
+        text-align: center;
+    }
+
+    .hero-text h2 {
+        font-size: 2rem !important; /* Tamaño reducido */
+        margin-bottom: 1rem !important;
+        line-height: 1.2;
+        margin-top: 0;
+    }
+
+    /* Texto descriptivo */
+    .hero-text p {
+        font-size: 1.1rem !important;
+        line-height: 1.5;
+        margin-bottom: clamp(1.5rem, 4vw, 3rem) !important;
+        
+    }
+
+    /* Botón */
+    .btn {
+        font-size: 1.1rem !important;
+        padding: 0.1rem 1.4rem !important;
+        margin-top: 1.5rem;
+    }
+
+    /* Sección de Canchas y Servicios */
+    .texto-seccion {
+        padding: 0 10px;
+    }
+    
+    .seccion-con-imagen {
+        margin-bottom: 2rem;
+    }
+    .section-text {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .footer-links a {
+        color: #ddd;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        transition: color 0.3s ease;
+        /*centrar texto*/
+        text-align: center;
+    }
+
+    .footer-contact p {
+        color: #ddd;
+        text-decoration: none;
+        margin-bottom: 0.5rem;
+        transition: color 0.3s ease;
+        /*centrar texto*/
+        text-align: center;
+    }
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: #FF6B00;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+.nav-links a:hover {
+    color: #FF6B00;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #FF6B00;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.burger {
+    display: none;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #e26d0e;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+/* Hero Section - Versión ajustada */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/fondo_inicio.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Cambiado de center a flex-start */
+    padding-left: 5%; /* Espacio desde el borde izquierdo */
+    color: white;
+    margin-top: 80px;
+}
+
+.hero-text {
+    max-width: 600px; /* Ancho máximo para el texto */
+    text-align: left; /* Alineación izquierda */
+}
+
+.hero-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    line-height: 1.2; /* Mejor espaciado entre líneas */
+}
+
+.hero-text p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Sombra para mejor legibilidad */
+}
+
+/* Ajustes específicos para el título */
+.hero-text h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    white-space: nowrap; /* Evita el salto de línea */
+    overflow: visible; /* Permite que el texto desborde si es necesario */
+}
+
+/* Ajuste responsivo para pantallas pequeñas */
+@media screen and (max-width: 768px) {
+    .hero-text h2 {
+        white-space: normal; /* Permite saltos en móviles */
+        font-size: 2.5rem;
+    }
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.1rem 1.4rem;
+    background: #FF6B00;
+    color: white;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border: 2px solid #FF6B00;
+    margin-top: 2rem;
+}
+
+.btn:hover {
+    background: transparent;
+    color: #FF6B00;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilos para la sección Canchas y Servicios */
+.canchas {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/fondo_servicios.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.section.canchas {
+    padding-bottom: 0rem !important; /* Ajusta este valor (40px, 30px, etc.) */
+}
+
+.section.servicios {
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+        url('../images/fondo_servicios.jpg'); /* Ajusta la ruta */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: white;
+    padding-top: 0rem !important;
+}
+
+.servicios .section-subtitle {
+    margin-bottom: 30px !important; /* Reduce espacio bajo el título de servicios */
+}
+
+/* Asegurar que el carrusel tenga fondo transparente */
+.servicios .mobile-carousel,
+.servicios .servicios-grid {
+    background-color: transparent;
+}
+
+/* Corrección para contenido */
+.servicios .container {
+    position: relative;
+    z-index: 2;
+}
+
+/* Efecto de borde externo */
+.cancha-item::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border: 2px solid transparent;
+    border-radius: 12px;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.cancha-item:hover::after {
+    border-color: rgba(255, 107, 0, 0.5);
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+}
+
+/* Contenedor de imagen con overflow */
+.cancha-img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+}
+
+/* Efecto de marco luminoso */
+.cancha-img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    border-radius: 8px;
+    z-index: 2;
+    transition: all 0.4s ease;
+    pointer-events: none;
+}
+
+.cancha-item:hover .cancha-img-container::before {
+    border-color: rgba(255, 107, 0, 0.6);
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+}
+
+.seccion-con-imagen {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 2rem;
+}
+
+.imagen-destacada {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.texto-seccion {
+    width: 50%;
+}
+
+.canchas-grid, .servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+/* Contenedor principal del servicio */
+.servicio-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: #fff; /* Fondo blanco para mejor contraste */
+}
+
+/* Contenedor de imagen */
+.servicio-img-container {
+    position: relative;
+    height: 200px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px 12px 0 0;
+}
+
+.cacha-item {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.cacha-item:hover, .servicio-item:hover {
+    transform: translateY(-10px);
+}
+
+/* Imagen del servicio */
+.servicio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease;
+}
+
+.cacha-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+/* Info del servicio */
+.servicio-info {
+    padding: 20px;
+    background: linear-gradient(to right, #1a2a3a, #2c3e50);
+    color: white;
+    border-radius: 0 0 12px 12px;
+}
+
+.cacha-info{
+    padding: 1.5rem;
+}
+
+/* Título del servicio */
+.servicio-info h3 {
+    font-size: 1.3rem;
+    color: #FF6B00;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+/* Efecto subrayado animado */
+.servicio-info h3::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    background: #FF6B00;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+/* Descripción */
+.servicio-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+
+}
+
+/* Efecto hover completo */
+.servicio-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255,107,0,0.2);
+}
+
+.servicio-item:hover img {
+    transform: scale(1.05);
+}
+
+.servicio-item:hover .servicio-info h3::after {
+    width: 100%;
+}
+
+.servicio-item:hover .servicio-info h3 {
+    text-shadow: 0 0 8px rgba(255, 107, 0, 0.5);
+}
+
+/* Efecto de marco naranja */
+.servicio-img-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border: 3px solid transparent;
+    border-radius: 9px;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.servicio-item:hover .servicio-img-container::before {
+    border-color: rgba(255,107,0,0.6);
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+}
+
+.cacha-info h3{
+    color: #FF6B00;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+/* Contenedor de la cancha */
+.cancha-item {
+    position: relative;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+/* Imágenes de las canchas */
+.cancha-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+    filter: brightness(0.9);
+    transform-origin: center bottom;
+    position: relative;
+    z-index: 1;
+}
+
+/* Efecto hover para mejor interactividad */
+.cancha-item:hover img {
+    transform: scale(1.03);
+    filter: brightness(1.1);
+}
+
+
+
+/* Texto de la cancha */
+.cancha-info {
+    padding: 25px;
+    background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.9) 100%);
+    color: white;
+    position: relative;
+    z-index: 2;
+    border-radius: 0 0 10px 10px;
+}
+
+.cancha-item:hover, .servicio-item:hover {
+    transform: translateY(-10px);
+}
+
+.cancha-item h3, .servicio-item h3 {
+    color: #FF6B00;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.cancha-info h3::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 3px;
+    background: #FF6B00;
+    bottom: -5px;
+    left: 0;
+    transition: width 0.5s ease;
+}
+
+/* Descripción */
+.cancha-info p {
+    font-size: 1rem;
+    line-height: 1.5;
+    opacity: 0.9;
+}
+
+/* Efecto hover completo */
+.cancha-item:hover {
+    transform: translateY(-10px) rotateX(5deg);
+    box-shadow: 0 15px 30px rgba(255,107,0,0.3);
+}
+
+
+.cancha-item:hover .cancha-info h3::after {
+    width: 100%;
+}
+
+/* Efecto de luz naranja */
+.cancha-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: inset 0 0 15px rgba(255, 107, 0, 0);
+    transition: all 0.5s ease;
+    z-index: 2;
+    border-radius: 10px;
+}
+
+.cancha-item:hover::before {
+    box-shadow: 
+        inset 0 0 10px rgba(255, 107, 0, 0.7),
+        inset 0 0 20px rgba(255, 107, 0, 0.4);
+}
+
+.cancha-item p, .servicio-item p {
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    
+    
+    .seccion-con-imagen {
+        flex-direction: column;
+    }
+    
+    .texto-seccion, .imagen-destacada {
+        width: 100%;
+    }
+    
+    .imagen-destacada {
+        order: -1;
+        margin-bottom: 1.5rem;
+    }
+    
+    .canchas-grid, .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+    .cancha-item img {
+        height: 200px; /* Altura menor en móviles */
+    }
+    
+    .cancha-info {
+        padding: 20px;
+    }
+
+    .cancha-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .cancha-item {
+        margin-bottom: 30px;
+    }
+
+    .servicio-item {
+        margin-bottom: 25px;
+    }
+
+    .servicio-info {
+        padding: 15px;
+    }
+    
+    .servicio-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .servicio-img-container {
+        height: 180px;
+    }
+
+    .section.canchas {
+        padding-bottom: 0rem !important;
+    }
+    .section.servicios {
+        padding-top: 0 !important;
+    }
+    /*Botón*/
+    .nav-links {
+        align-items: center;
+    }   
+    /* Animación del botón */
+    .burger.toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    .burger.toggle .line2 {
+        opacity: 0;
+    }
+    .burger.toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+}
+
+
+
+/* Tarifas Section */
+.tarifas {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/fondo_tarifas.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.tarifas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+
+.tarifa-item {
+    background: white;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.tarifa-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.tarifa-item h3 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.precio {
+    font-size: 2rem;
+    color: #FF6B00;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.horarios {
+    background: #FF6B00;
+    color: white;
+    padding: 2rem;
+    border-radius: 30px;
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.horarios h3 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.horarios p {
+    margin-bottom: 0.5rem;
+}
+
+.section-text {
+    font-size: 1.1rem;
+    color: #fff; /* Cambié a blanco para mejor contraste */
+    max-width: 780px;
+    margin: 0 auto 2rem;
+    padding: 15px;
+    background: rgba(0, 0, 0, 0.3);
+    border-left: 4px solid #FF6B00;
+    position: relative;
+    overflow: hidden;
+}
+
+.section-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 107, 0, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.section-subtitle:hover::before {
+    left: 100%;
+}
+
+.section-text.typing-effect {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3.5s steps(40, end);
+}
+
+/* Nosotros Section */
+.nosotros {
+    background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('../images/fondo_sobre_nosotros.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+/* Contenedor principal de ubicación y mapa */
+.ubicacion-container {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+/* Estilos para la información de ubicación */
+.ubicacion-info {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex: 1;
+    max-width: 40%;
+}
+
+/* Contenedor del mapa */
+.mapa-container {
+    flex: 1;
+    min-width: 300px;
+    height: 330px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para los títulos */
+.ubicacion-info h3 {
+    color: #FF6B00;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.ubicacion-info h4 {
+    margin: 1.5rem 0 0.5rem;
+    color: #333;
+}
+
+/* Estilos responsivos para el sobre nosotros*/
+@media (max-width: 768px) {
+    .ubicacion-container {
+        flex-direction: column;
+    }
+    
+    .mapa-container {
+        height: 300px;
+        /*largo*/
+    }
+    
+    .ubicacion-info {
+        min-width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: white;
+    padding: 3rem 0 1rem;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-logo h2 {
+    color: #FF6B00;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links a {
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    transition: color 0.3s ease;
+    /*centrar texto*/
+    text-align: center;
+}
+
+.footer-contact p {
+    color: #ddd;
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    /*centrar texto*/
+    text-align: center;
+}
+
+.footer-links a:hover {
+    color: #FF6B00;
+}
+
+.footer-contact p {
+    margin-bottom: 0.5rem;
+    color: #ddd;
+}
+
+.copyright {
+    text-align: center;
+    padding-top: 1.5rem;
+    border-top: 1px solid #555;
+    color: #aaa;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .burger {
+        display: block;
+    }
+    
+    .nav-active {
+        display: flex;
+        flex-direction: column ;
+        position: absolute;
+        top: 80px;
+        right: 0;
+        background: #002142;
+        width: 100%;
+        padding: 2rem;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .nav-active li {
+        margin: 1rem 0;
+    }
+    
+    .toggle .line1 {
+        transform: rotate(-45deg) translate(-5px, 6px);
+    }
+    
+    .toggle .line2 {
+        opacity: 0;
+    }
+    
+    .toggle .line3 {
+        transform: rotate(45deg) translate(-5px, -6px);
+    }
+    
+    .hero-content h2 {
+        font-size: 2.5rem;
+    }
+    
+    .hero-content p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .section-title {
+        font-size: 2rem;
+        animation: none;
+        text-shadow: 0 0 5px rgba(255, 107, 0, 0.3);
+    }
+    
+    .section-subtitle {
+        font-size: 1rem;
+        padding: 10px;
+    }
+
+    .section-text {
+        font-size: 1rem;
+        padding: 10px;
+    }
+    
+    .hero-content h2 {
+        font-size: 2rem;
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+    
+    .logo h1 {
+        font-size: 1.5rem;
+    }
+    
+    .hero {
+        margin-top: 60px;
+    }
+    
+    .hero-content h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .tarifas-grid {
+        grid-template-columns: 1fr;
+    }
+}

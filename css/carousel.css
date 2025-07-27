@@ -1,0 +1,70 @@
+/* Carrusel Móvil */
+.mobile-carousel {
+    display: none;
+    position: relative;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 0 15px;
+    box-sizing: border-box;
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 107, 0, 0.8);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.carousel-prev {
+    left: 5px;
+}
+
+.carousel-next {
+    right: 5px;
+}
+
+/* Transición entre móvil/desktop */
+@media (max-width: 768px) {
+    .mobile-carousel {
+        display: block;
+    }
+    .canchas-grid, .servicios-grid {
+        display: none;
+    }
+    
+    .cancha-item, .servicio-item {
+        margin: 0 auto;
+        max-width: 85%;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+}
+
+@media (min-width: 769px) {
+    .mobile-carousel {
+        display: none !important;
+    }
+}
