@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/carousel.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
     <!-- Menú de navegación -->
@@ -19,12 +20,44 @@
                     <img src="images/logo.png" alt="WALLY LOS GEMELOS" class="logo-img glow-effect">
                 </a>
             </div>
+            <div class="social-container">
+                <!-- Facebook -->
+                <button class="Btn" onclick="window.open('', '#')">
+                    <span class="svgContainer">
+                    <svg fill="white" class="svgIcon" viewBox="0 0 448 512" height="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M400 32H48A48 48 0 0 0 0 80v352a48 48 0 0 0 48 48h137.25V327.69h-63V256h63v-54.64c0-62.15 37-96.48 93.67-96.48 27.14 0 55.52 4.84 55.52 4.84v61h-31.27c-30.81 0-40.42 19.12-40.42 38.73V256h68.78l-11 71.69h-57.78V480H400a48 48 0 0 0 48-48V80a48 48 0 0 0-48-48z"/>
+                    </svg>
+                    </span>
+                    <span class="BG" style="background: linear-gradient(45deg, #1877F2 0%, #0A5FBD 100%);"></span>
+                </button>
+
+                <!-- WhatsApp -->
+                <button class="Btn" onclick="window.open('https://wa.me/59171966567', '_blank')">
+                    <span class="svgContainer">
+                    <svg fill="white" class="svgIcon" viewBox="0 0 448 512" height="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L4 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-82.7 184.6-184.5 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"/>
+                    </svg>
+                    </span>
+                    <span class="BG" style="background: linear-gradient(45deg, #25D366 0%, #128C7E 100%);"></span>
+                </button>
+                <!-- TikTok -->
+                <button class="Btn" onclick="window.open('https://www.tiktok.com/@campeon711?_t=ZM-8yNkiMqFh9a&_r=1', '_blank')">
+                    <span class="svgContainer">
+                    <svg fill="white" class="svgIcon" viewBox="0 0 448 512" height="1.5em" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M448,209.91a210.06,210.06,0,0,1-122.77-39.25V349.38A162.55,162.55,0,1,1,185,188.31V278.2a74.62,74.62,0,1,0,52.23,71.18V0l88,0a121.18,121.18,0,0,0,1.86,22.17h0A122.18,122.18,0,0,0,381,102.39a121.43,121.43,0,0,0,67,20.14Z"/>
+                    </svg>
+                    </span>
+                    <span class="BG" style="background: linear-gradient(45deg, #25F4EE 0%, #000000 50%, #FE2C55 100%);"></span>
+                </button>
+            </div>
+
             <ul class="nav-links">
                 <li><a href="#inicio">INICIO</a></li>
                 <li><a href="#canchas">CANCHAS Y SERVICIOS</a></li>
                 <li><a href="#tarifas">TARIFAS Y HORARIOS</a></li>
                 <li><a href="#sobre">SOBRE NOSOTROS</a></li>
             </ul>
+            
             <div class="burger">
                 <div class="line1"></div>
                 <div class="line2"></div>
@@ -35,17 +68,54 @@
 
     <!-- Sección Inicio -->
     <section id="inicio" class="hero">
+        <div class="loader-wrapper">
+            <!-- Primera línea: WALLY -->
+            <div class="loader-line">
+            <span class="loader-letter">W</span>
+            <span class="loader-letter">A</span>
+            <span class="loader-letter">L</span>
+            <span class="loader-letter">L</span>
+            <span class="loader-letter">Y</span>
+            </div>
+            
+            <!-- Segunda línea: LOS GEMELOS -->
+            <div class="loader-line">
+            <span class="loader-letter">L</span>
+            <span class="loader-letter">O</span>
+            <span class="loader-letter">S</span>
+            <span class="loader-letter space"></span>
+            <span class="loader-letter">G</span>
+            <span class="loader-letter">E</span>
+            <span class="loader-letter">M</span>
+            <span class="loader-letter">E</span>
+            <span class="loader-letter">L</span>
+            <span class="loader-letter">O</span>
+            <span class="loader-letter">S</span>
+            </div>
+            
+            <div class="loader"></div>
+            
+        </div>
+        
         <div class="hero-text animate__animated animate__fadeInRight">
-            <h2>WALLY LOS GEMELOS</h2>
             <p>El punto de encuentro de<br>
             los amantes del wally.<br>
             Un espacio que<br>
-            une a la<br>
-            comunidad<br>
-            deportiva más<br>
-            apasionada.<br>
-            <a href="#tarifas" class="btn animate__animated animate__pulse animate__infinite">CONSULTAR<br>HORARIOS</a>
+            une a la comunidad<br>
+            deportiva más apasionada.<br>
+            </p>
+            
+            <a href="#tarifas" class="btn animate__animated animate__pulse animate__infinite">
+                <svg class="pl" width="240" height="240" viewBox="0 0 240 240">
+                    <circle class="pl__ring pl__ring--b" cx="120" cy="120" r="35" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 220" stroke-dashoffset="-110" stroke-linecap="round"></circle>
+                    <circle class="pl__ring pl__ring--c" cx="85" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+                    <circle class="pl__ring pl__ring--d" cx="155" cy="120" r="70" fill="none" stroke="#000" stroke-width="20" stroke-dasharray="0 440" stroke-linecap="round"></circle>
+                </svg>
+                CONSULTAR<br>HORARIOS
+            </a>
+            
         </div>
+        
     </section>
 
     <!-- Sección Canchas -->
@@ -63,7 +133,7 @@
                                 <img src="images/cancha1.jpg" alt="Cancha Parquet 1">
                             </div>
                             <div class="cancha-info">
-                                <h3>CANCHA DE PARQUET 1</h3>
+                                <h3>CANCHA "A"</h3>
                                 <p>Piso de madera profesional para un rebote preciso. Usada en competencias.</p>
                             </div>
                         </div>
@@ -74,7 +144,7 @@
                                 <img src="images/cancha2.jpg" alt="Cancha Parquet 2">
                             </div>
                             <div class="cancha-info">
-                                <h3>CANCHA DE PARQUET 2</h3>
+                                <h3>CANCHA "B"</h3>
                                 <p>Piso de madera profesional para un rebote preciso. Usada en competencias.</p>
                             </div>
                         </div>
@@ -85,7 +155,7 @@
                                 <img src="images/futbolin.jpg" alt="Cancha Multiuso">
                             </div>
                             <div class="cancha-info">
-                                <h3>CANCHA MULTIUSO</h3>
+                                <h3>ARCOS MULTIUSO</h3>
                                 <p>¡Convierte tu partido de wally en fútbolín con nuestros arcos ajustables!</p>
                             </div>
                         </div>
@@ -102,7 +172,7 @@
                         <img src="images/cancha1.jpg" alt="Cancha Parquet 1">
                     </div>
                     <div class="cancha-info">
-                        <h3>CANCHA DE PARQUET 1</h3>
+                        <h3>CANCHA "A"</h3>
                         <p>Piso de madera profesional para un rebote preciso. Usada en competencias.</p>
                     </div>
                 </div>
@@ -111,7 +181,7 @@
                         <img src="images/cancha2.jpg" alt="Cancha Parquet 2">
                     </div>
                     <div class="cancha-info">
-                        <h3>CANCHA DE PARQUET 2</h3>
+                        <h3>CANCHA "B"</h3>
                         <p>Piso de madera profesional para un rebote preciso. Usada en competencias.</p>
                     </div>
                 </div>
@@ -120,7 +190,7 @@
                         <img src="images/futbolin.jpg" alt="Cancha Multiuso">
                     </div>
                     <div class="cancha-info">
-                        <h3>CANCHA MULTIUSO</h3>
+                        <h3>ARCOS MULTIUSO</h3>
                         <p>¡Convierte tu partido de wally en fútbolín con nuestros arcos ajustables!</p>
                     </div>
                 </div>
@@ -144,7 +214,7 @@
                             </div>
                             <div class="servicio-info">
                                 <h3>TIENDA</h3>
-                                <p>Refrescos, jugos, galletas y snacks para recuperar energía.</p>
+                                <p>Refrescos, jugos, galletas, snacks y demás productos para recuperar energía.</p>
                             </div>
                         </div>
                     </div>
@@ -183,7 +253,7 @@
                     </div>
                     <div class="servicio-info">
                         <h3>TIENDA</h3>
-                        <p>Refrescos, jugos, galletas y snacks para recuperar energía.</p>
+                        <p>Refrescos, jugos, galletas, snacks y demás productos para recuperar energía.</p>
                     </div>
                 </div>
                 <div class="servicio-item">
@@ -214,29 +284,135 @@
             <h2 class="section-title">TARIFAS POR HORA</h2>
             <p class="section-subtitle">Tenemos precios accesibles para que juegues sin límites</p>
             
-            <div class="tarifas-grid">
-                <div class="tarifa-item animate__animated animate__fadeIn">
-                    <h3>LUNES A VIERNES</h3>
-                    <p class="precio">Bs. 15</p>
-                    <p>14:00PM - 23:00PM</p>
+            <div class="cards-container">
+                <!-- Tarjeta 1: Lunes a Viernes -->
+                <div class="card-container">
+                    <div class="title-card">
+                    <p>LUNES A VIERNES</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m.5-13H11v6l5.2 3.2l.8-1.3l-4.5-2.7V7z"/>
+                    </svg>
+                    </div>
+                    <div class="card-content">
+                    <p class="title">HORARIO NORMAL</p>
+                    <p class="plain">
+                        <span>Bs. 15</span>
+                        <span>/ hora</span>
+                    </p>
+                    <p class="description">
+                        14:00 PM - 23:00 PM. Horario perfecto para después del trabajo o estudio.<br>
+                        ¡Ven a liberar estrés en la cancha con tus mejores tiros!
+                    </p>
+                    <button class="card-btn" onclick="reservar('Lunes a Viernes')">Reservar por WhatsApp</button>
+                    </div>
                 </div>
-                <div class="tarifa-item animate__animated animate__fadeIn">
-                    <h3>FINES DE SEMANA</h3>
-                    <p class="precio">Bs. 20</p>
-                    <p>08:00AM - 23:00PM</p>
+
+                <!-- Tarjeta 2: Fin de Semana -->
+                <div class="card-container">
+                    <div class="title-card">
+                    <p>FINES DE SEMANA</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8s8 3.59 8 8s-3.59 8-8 8m.5-13H11v6l5.2 3.2l.8-1.3l-4.5-2.7V7z"/>
+                    </svg>
+                    </div>
+                    <div class="card-content">
+                    <p class="title">HORARIO ESPECIAL</p>
+                    <p class="plain">
+                        <span>Bs. 20</span>
+                        <span>/ hora</span>
+                    </p>
+                    <p class="description">
+                        8:00 AM - 23:00 PM. Disfruta de partidos hasta la noche con tus amigos o familia.<br>
+                        ¡El plan perfecto para tus mañanas o tardes deportivas!
+                    </p>
+                    <button class="card-btn" onclick="reservar('Fin de Semana')">Reservar por WhatsApp</button>
+                    </div>
                 </div>
-                <div class="tarifa-item animate__animated animate__fadeIn">
-                    <h3>PROMO GRUPAL</h3>
-                    <p class="precio">Bs. 50</p>
-                    <p>3 horas + 2 balones gratis (Solo viernes)</p>
+
+                <!-- Tarjeta 3: Promo Cumple -->
+                <div class="card-container">
+                    <div class="title-card">
+                    <p>PROMO CUMPLEAÑOS</p>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24">
+                        <path fill="currentColor" d="M9 6c0-1.66 1.34-3 3-3s3 1.34 3 3s-1.34 3-3 3s-3-1.34-3-3m4 8.5c0 .56.45 1 1 1h5.5c.55 0 1-.45 1-1c0-.28-.11-.53-.29-.71l-3.83-3.83l-1.94-1.94c-.2-.2-.45-.31-.71-.31c-.56 0-1 .45-1 1v6.5m-5.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 13 7.5 13s1.5.67 1.5 1.5S8.33 16 7.5 16m-1-9c-.83 0-1.5-.67-1.5-1.5S5.67 4 6.5 4S8 4.67 8 5.5S7.33 7 6.5 7M4 14c-.55 0-1 .45-1 1s.45 1 1 1h1v-2H4m-2-4h2v2H2v-2m18 4h-1v2h1c.55 0 1-.45 1-1s-.45-1-1-1m2-4h-2v2h2v-2z"/>
+                    </svg>
+                    </div>
+                    <div class="card-content">
+                    <p class="title">OFERTA ESPECIAL</p>
+                    <p class="plain">
+                        <span>Gratis</span>
+                        <span>/ 1 hora</span>
+                    </p>
+                    <p class="description">
+                        Promoción diaria: 1 hora GRATIS + balón al mostrar tu carnet.<br>
+                        ¡Ideal para festejar tu cumpleaños con amigos y deporte!
+                    </p>
+                    <button class="card-btn" onclick="reservar('Promo Grupal')">Reservar por WhatsApp</button>
+                    </div>
                 </div>
             </div>
-            
-            <div class="horarios animate__animated animate__fadeInUp">
-                <h3>HORARIOS DE ATENCIÓN</h3>
-                <p>Lunes a Viernes: 14:00PM - 23:00PM</p>
-                <p>Sábados y Domingos: 08:00AM - 11:00PM</p>
-                <p>Feriados: Horario especial (consulta)</p>
+
+            <script>
+                function reservar(tipoReserva) {
+                let mensaje = `Hola, quisiera reservar para ${tipoReserva} en WALLY LOS GEMELOS.`;
+                window.open(`https://wa.me/59171966567?text=${encodeURIComponent(mensaje)}`, '_blank');
+                }
+            </script>
+
+            <!-- Contenedor para horarios + galería 3D -->
+            <div class="horarios-gallery-container">
+                <!-- Tarjeta de Horarios -->
+                <div class="e-card playing">
+                    <div class="image"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    <div class="wave"></div>
+                    
+                    <div class="infotop">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="icon-reloj">
+                            <path fill="currentColor" d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10 10-4.5 10-10S17.5 2 12 2zm0 18c-4.4 0-8-3.6-8-8s3.6-8 8-8 8 3.6 8 8-3.6 8-8 8zm.5-13H11v6l5.2 3.2.8-1.3-4.5-2.7V7z"/>
+                        </svg>
+                        <br>    
+                            HORARIOS DE ATENCIÓN
+                        <br>
+                        <div class="schedule">
+                            Lunes a Viernes: 14:00 - 23:00<br>
+                            Sábados y Domingos: 08:00 - 23:00<br>
+                            Feriados: Horario especial
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Galería 3D de Imágenes del Negocio -->
+                <div class="gallery-3d-container">
+                    <div class="card-3d">
+                        <div style="background-image: url('images/negocio1.jpg')"></div>
+                        <div style="background-image: url('images/negocio2.jpg')"></div>
+                        <!-- Video 1 -->
+                        <div class="video-container">
+                            <video loop muted autoplay>
+                                <source src="videos/tu-video1.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div style="background-image: url('images/negocio3.jpg')"></div>
+                        <div style="background-image: url('images/negocio4.jpg')"></div>
+                        <!-- Video 2 -->
+                        <div class="video-container">
+                            <video loop muted autoplay>
+                                <source src="videos/tu-video2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div style="background-image: url('images/negocio5.jpg')"></div>
+                        <div style="background-image: url('images/negocio6.jpg')"></div>
+                        <div class="video-container">
+                            <video loop muted autoplay>
+                                <source src="videos/tu-video3.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div style="background-image: url('images/negocio7.jpg')"></div>
+                    </div>
+                    <p class="gallery-caption">Galería de Nuestras Instalaciones</p>
+                </div>
             </div>
         </div>
     </section>
@@ -245,17 +421,89 @@
     <section id="sobre" class="section nosotros">
         <div class="container">
             <h2 class="section-title">NUESTRA HISTORIA</h2>
-            <p class="section-text">Fundado en 2015, WALLY LOS GEMELOS nació de la pasión por el deporte y la comunidad de El Alto. Quisimos crear un espacio donde familias y amigos disfruten del wally en un ambiente seguro y profesional. Hoy somos referentes en la ciudad gracias a nuestras canchas de alta calidad y servicio al cliente excepcional.</p>
+            <p class="section-text">Fundado el 6 de Mayo de 2023, WALLY LOS GEMELOS nació de la pasión por el deporte y la comunidad de El Alto. Quisimos crear un espacio donde familias y amigos disfruten del wally en un ambiente seguro y profesional.</p>
             
             <div class="ubicacion-container">
-                <div class="ubicacion-info animate__animated animate__fadeInUp">
-                    <h3>UBICACIÓN</h3>
-                    <p>"WALLY LOS GEMELOS" se encuentra en el corazón del vibrante distrito de KENKO Z.VILLA AROMA...</p>
-                    <h4>¿Cómo llegar?</h4>
-                    <p>Transporte público: Combis y minibuses con rutas directas (líneas 223, 315 y 40).</p>
-                    <p>Referencia: A media cuadra del mercado "San Francisco", frente al colegio "Libertador Simón Bolívar".</p>
+                <div class="location-card">
+                    <div class="location-content">
+                        <div class="location-back">
+                            <div class="location-back-content">
+                                <strong>UBICACIÓN</strong>
+                                <p>"WALLY LOS GEMELOS" se encuentra en el corazón del vibrante distrito de KENKO Z.VILLA AROMA.</p>
+                                <button class="pinBtn">
+                                <span class="IconContainer">
+                                    <svg
+                                    stroke-width="0"
+                                    height="0.9rem><g id="
+                                    style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"
+                                    xml:space="preserve"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    version="1.1"
+                                    viewBox="0 0 64 64"
+                                    fill="#000000"
+                                    >
+                                    <g id="SVGRepo_iconCarrier">
+                                        <g id="Icons1">
+                                        <g>
+                                            <path
+                                            style="fill-rule:nonzero;"
+                                            d="M29.975,35.163l3.235,3.234c0.353,0.331 0.5,0.388 0.773,0.481c1.049,0.354 2.203,-0.133 2.576,-1.389l1.204,-4.605l6.544,-6.544l3.69,-0.486c0.431,-0.071 0.691,-0.136 1.153,-0.568l2.47,-2.47c0.275,-0.294 0.298,-0.365 0.379,-0.53c0.372,-0.754 0.33,-1.541 -0.379,-2.299c-3.803,-3.802 -7.485,-7.727 -11.41,-11.403c-0.311,-0.255 -0.383,-0.273 -0.553,-0.344c-0.734,-0.304 -1.454,-0.246 -2.18,0.434l-2.47,2.47c-0.302,0.323 -0.471,0.537 -0.57,1.17l-0.457,3.713l-6.531,6.531l-4.63,1.172c-0.924,0.267 -0.962,0.52 -1.162,0.813c-0.528,0.776 -0.53,1.719 0.239,2.54l3.235,3.235l-13.134,17.979l17.978,-13.134Zm-2.698,-2.698l0.551,0.551l-2.044,1.493l1.493,-2.044Zm11.615,-19.549l8.485,8.486l-0.576,0.575c-1.23,0.162 -2.459,0.324 -3.689,0.486c-0.699,0.116 -0.851,0.286 -1.153,0.569l-7.407,7.407c-0.235,0.251 -0.367,0.389 -0.521,0.908l-0.459,1.755l-6.359,-6.358l1.752,-0.444c0.339,-0.097 0.535,-0.159 0.923,-0.524l7.407,-7.408c0.493,-0.527 0.507,-0.757 0.571,-1.17l0.457,-3.713l0.569,-0.569Z"
+                                            ></path>
+                                        </g>
+                                        </g>
+                                    </g>
+                                    </svg>
+                                </span>
+                                <p class="text">Go!</p>
+                                </button>
+
+                            </div>
+                        </div>
+                        <div class="location-front">
+                            <div class="location-img">
+                                <div class="location-circle"></div>
+                                <div class="location-circle" id="location-right"></div>
+                                <div class="location-circle" id="location-bottom"></div>
+                            </div>
+                            <div class="location-front-content">
+                                <small class="location-badge">¿CÓMO LLEGAR?</small>
+                                <div class="location-description">
+                                    <div class="location-title">
+                                        <p class="location-title-text">
+                                            <strong>TRANSPORTE PÚBLICO</strong>
+                                            <br>
+                                            Minibuses con rutas y aledaños a la Zona Villa Aroma, pasan cada 10 minutos.  
+                                        </p>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="65px" height="65px">
+                                            <path fill="#20c997" d="M18.92 6.01C18.72 5.42 18.16 5 17.5 5h-11c-.66 0-1.21.42-1.42 1.01L3 12v8c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h12v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-8l-2.08-5.99zM6.85 7h10.29l1.08 3.11H5.77L6.85 7zM19 17H5v-5h14v5z"/>
+                                            <circle fill="#20c997" cx="7.5" cy="14.5" r="1.5"/>
+                                            <circle fill="#20c997" cx="16.5" cy="14.5" r="1.5"/>
+                                        </svg>
+                                    </div>
+                                    <p class="location-card-footer">
+                                        Lineas Kenko Av Unión &nbsp; | &nbsp; 690, 283 y 639
+                                    </p>
+                                </div>
+                                <div class="location-description">
+                                    <div class="location-title">
+                                        <p class="location-title-text">
+                                            <strong>REFERENCIA</strong>
+                                            <br>
+                                            Al frente del mercado "Urupiña" y de la plaza de la zona "Villa Aroma", al lado de la piscina "Aqua Fresh".
+                                        </p>
+                                        <svg fill-rule="nonzero" height="65px" width="65px" viewBox="0,0,256,256" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg"><g style="mix-blend-mode: normal" text-anchor="none" font-size="none" font-weight="none" font-family="none" stroke-dashoffset="0" stroke-dasharray="" stroke-miterlimit="10" stroke-linejoin="miter" stroke-linecap="butt" stroke-width="1" stroke="none" fill-rule="nonzero" fill="#20c997"><g transform="scale(8,8)"><path d="M25,27l-9,-6.75l-9,6.75v-23h18z"></path></g></g></svg>
+                                    </div>
+                                    <p class="location-card-footer">
+                                        15 Minutos &nbsp; | &nbsp; A pie
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                
+                    
+    
                 <div class="mapa-container">
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d239.0255975725631!2d-68.19120577119402!3d-16.555879733510796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x915edf82fe6e3ec3%3A0x62468c4c62bcf279!2sWally%20Los%20Gemelos!5e0!3m2!1ses-419!2sbo!4v1753639066481!5m2!1ses-419!2sbo" 
                             width="100%" 
@@ -266,7 +514,6 @@
                             referrerpolicy="no-referrer-when-downgrade">
                     </iframe>
                 </div>
-            </div>
         </div>
     </section>
 
@@ -284,8 +531,47 @@
                     <a href="#sobre">Sobre Nosotros</a>
                 </div>
                 <div class="footer-contact">
-                    <p>Contacto: juanjosemamaniarias788@gmail.com</p>
-                    <p>Teléfono: +591 71966567</p>
+                    <!-- Redes sociales -->
+                    <div class="card">
+                        <div class="background"></div>
+                        <div class="logofooter">
+                            <!-- SVG de redes sociales -->
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="logo-svg">
+                            <path fill="white" d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"/>
+                            </svg>
+                        </div>
+                        
+                        <!-- Box 1: TikTok -->
+                        <a href="https://www.tiktok.com/@campeon711?_t=ZM-8yNkiMqFh9a&_r=1" target="_blank" class="box box1">
+                            <span class="icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="svg">
+                                <path fill="currentColor" d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.63.41-1.11 1.04-1.36 1.75-.21.51-.15 1.07-.14 1.61.24 1.64 1.82 3.02 3.5 2.87 1.12-.01 2.19-.66 2.77-1.61.19-.33.4-.67.41-1.06.1-1.79.06-3.57.07-5.36.01-4.03-.01-8.05.02-12.07z"/>
+                            </svg>
+                            </span>
+                            <span class="social-text">TikTok</span>
+                        </a>
+                        
+                        <!-- Box 2: WhatsApp -->
+                        <a href="https://wa.me/59171966567" target="_blank" class="box box2">
+                            <span class="icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="svg">
+                                <path fill="currentColor" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+                            </svg>
+                            </span>
+                            <span class="social-text">WhatsApp</span>
+                        </a>
+                        
+                        <!-- Box 3: Facebook -->
+                        <a href='' target='#' class="box box3">
+                            <span class="icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" class="svg">
+                                <path fill="currentColor" d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"/>
+                            </svg>
+                            </span>
+                            <span class="social-text">Facebook</span>
+                        </a>
+                        
+                    </div>
                 </div>
             </div>
             <div class="copyright">

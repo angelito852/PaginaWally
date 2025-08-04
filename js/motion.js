@@ -1,6 +1,5 @@
 // Efectos de movimiento adicionales
 document.addEventListener('DOMContentLoaded', function() {
-    // Efecto de onda para los elementos de servicios
     const serviceItems = document.querySelectorAll('.cancha-item, .servicio-item');
     
     serviceItems.forEach((item, index) => {
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         item.style.transitionDelay = `${index * 0.2}s`;
     });
     
-    // Efecto de hover para las imágenes (deberás agregar las imágenes en el HTML)
+    // Efecto de hover para las imágenes
     const images = document.querySelectorAll('.cancha-item img, .servicio-item img');
     
     images.forEach(img => {

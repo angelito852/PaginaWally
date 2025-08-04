@@ -1,7 +1,4 @@
-// Navbar scroll effect
-
-
-// Mobile menu toggle
+// Menu
 const burger = document.querySelector('.burger');
 const navLinks = document.querySelector('.nav-links');
 const navLinksItems = document.querySelectorAll('.nav-links li');
@@ -18,7 +15,6 @@ navLinksItems.forEach(item => {
     });
 });
 
-// Smooth scrolling for anchor links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -36,7 +32,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Animation on scroll
 function animateOnScroll() {
     const elements = document.querySelectorAll('.animate__animated');
     
@@ -54,7 +49,6 @@ function animateOnScroll() {
 window.addEventListener('scroll', animateOnScroll);
 window.addEventListener('load', animateOnScroll);
 
-// Button hover effect
 const buttons = document.querySelectorAll('.btn');
 buttons.forEach(button => {
     button.addEventListener('mouseenter', function() {
